@@ -19,7 +19,7 @@ RUN pnpm -v
 
 # Building app
 RUN pnpm run build
-HEALTHCHECK CMD curl --fail http://localhost:3000 || exit 1
-EXPOSE 3000
+HEALTHCHECK CMD curl --fail http://localhost:8080 || exit 1
+EXPOSE 8080
 
 CMD [ "pnpm", "run", "start" ]
