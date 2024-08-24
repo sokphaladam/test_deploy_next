@@ -15,11 +15,11 @@ RUN npm install -g pnpm
 COPY . .
 
 RUN pnpm i
-RUN pnpm -v
+# RUN pnpm -v
 
-# Building app
-RUN pnpm run build
-HEALTHCHECK CMD curl --fail http://localhost:8080 || exit 1
-EXPOSE 8080
+# # Building app
+# RUN pnpm run build
+# HEALTHCHECK CMD curl --fail http://localhost:8080 || exit 1
+# EXPOSE 8080
 
-CMD [ "pnpm", "run", "start" ]
+CMD [ "pnpm", "run", "dev" ]
